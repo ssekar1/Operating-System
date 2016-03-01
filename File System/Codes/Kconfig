@@ -1,0 +1,17 @@
+config FS421_FS
+	tristate "UMBC CMSC 421 file system support"
+	depends on BLOCK
+	help
+	  FS421 is a simplified file system implemented for Project 2
+	  for the UMBC course CMSC421: Operating Systems.
+	  While otherwise more minimal than the ext2 or even MINIX
+	  file systems, it has an interesting allocation strategy that
+	  uses a binary buddy algorithm and an excalating block ptr scheme.
+
+	  The file system type as used by mount(1), mount(2) and
+	  fstab(5) is 'fs421'
+
+	  To compile this as a module, choose M here: the module will be
+	  called fs421.  (In fact, for CMSC 421 students, testing the
+	  ability to load as a module is mandatory.)
+	  If unsure, say Y: live life on the edge!
